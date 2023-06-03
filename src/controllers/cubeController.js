@@ -8,8 +8,11 @@ router.get("/create", (req, res) => {
 });
 
 router.post("/create", (req, res) => {
+
   const { name, description, imageUrl, difficultyLevel } = req.body;
+
   cubeService.create({ name, description, imageUrl, difficultyLevel });
+  
   res.redirect("/");
 });
 
