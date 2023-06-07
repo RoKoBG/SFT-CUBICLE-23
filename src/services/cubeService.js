@@ -21,7 +21,11 @@ exports.getAll = async (search, from, to) => {
 
   return result;
 };
+// Without accessories
 exports.getOne = (cubeId) => Cube.findById(cubeId);
+// With accessories
+exports.getOneWithAccessories = (cubeId) =>
+  this.getOne(cubeId).populate("accessories");
 
 exports.create = (cubeData) => {
   const cube = new Cube(cubeData);
@@ -33,7 +37,7 @@ exports.attachAccessory = async (cubeId, accessoryId) => {
   // return Cube.findByIdAndUpdate(cubeId, {
   //   $push: { accessories: accessoryId },  ---------------> One way to attach
   // });
-// Other way with two queries. This method is easier but other is better with only One Query :P
+  // Other way with two queries. This method is easier but other is better with only One Query :P
   const cube = await Cube.findById(cubeId);
   cube.accessories.push(accessoryId);
 
