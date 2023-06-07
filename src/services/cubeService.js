@@ -18,6 +18,14 @@ const cubes = [
       "https://cdn.myminifactory.com/assets/object-assets/5e8d86ea0ffa0/images/720X720-apd-test-cube-2020-apr-07-04.jpg",
     difficultyLevel: 3,
   },
+  {
+    id: "1gYcjHhJ367g6djlOp",
+    name: "Mirror CUBE",
+    description: "A test cube to represent it :D",
+    imageUrl:
+      "https://cdn.myminifactory.com/assets/object-assets/5e8d86ea0ffa0/images/720X720-apd-test-cube-2020-apr-07-04.jpg",
+    difficultyLevel: 2,
+  }
 ];
 
 exports.getAll = (search,from,to) => {
@@ -30,7 +38,7 @@ result=result.filter(cube=>cube.name.toLowerCase().includes(search.toLowerCase()
   if(from){
 result = result.filter(cube =>cube.difficultyLevel >= Number(from));
   }
-  
+
   if(to){
 result = result.filter(cube =>cube.difficultyLevel<= Number(to))
   }
