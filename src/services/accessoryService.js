@@ -1,3 +1,4 @@
-const Accessory = require('../models/Accessory');
+const Accessory = require("../models/Accessory");
 
-exports.create = (accessory) => Accessory.create(accessoryData);
+exports.create = (accessoryData) =>
+  Accessory.create(accessoryData);
