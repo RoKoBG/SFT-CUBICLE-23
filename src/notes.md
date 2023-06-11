@@ -1,4 +1,4 @@
-* Edit page
+Edit page
 * Show difficulty select
 * Conditional buttons
 * Router guards
