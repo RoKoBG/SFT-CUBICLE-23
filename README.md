@@ -1,2 +1,2 @@
 # SFT-CUBICLE-23
-SoftUni Workshop Project
+SoftUni Workshop Project With ExpressJS/Mongoose
